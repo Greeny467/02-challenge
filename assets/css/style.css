@@ -436,4 +436,7 @@ between the tabs for the text they would hold*/
         padding-right:4vw;
         margin-right:4vw;
     }
+    nav{
+        margin-left:10px;
+    }
 }
