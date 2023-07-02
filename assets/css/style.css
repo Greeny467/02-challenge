@@ -1,0 +1,339 @@
+:root{
+    --navycolor:rgb(47, 85, 116);
+}
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+header {
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.grow{
+    flex: 1 0 0
+}
+
+.border{
+    border:8px solid var(--navycolor);
+}
+#titleborderfix{
+    border-left-style:hidden;
+}
+#titlegrow{
+    flex:0.4 0 0;
+    display:flex;
+    
+}
+
+
+#pagetitle {
+    flex: 1 0 0;
+    font-weight:bold;
+    color:var(--navycolor);
+    margin:20px;
+    font-size:50px;
+}
+
+nav {
+    flex:1 0 0;
+    display:flex;
+    justify-content: space-between;
+    margin-top:40px;
+    margin-bottom:40px;
+    margin-left:40px;
+    margin-right:40px;
+    border:5px;
+    border-color:rgb(12, 10, 10);
+}
+nav a{
+    padding: 10px;
+    padding-left:20px;
+    padding-right:20px;
+    background-color: rgb(236, 235, 235);
+    font-size:25px;
+    margin-right:20px;
+    color:black;
+}
+
+nav a:hover{
+    color:rgb(48, 148, 151);
+    border: 2px solid var(--navycolor);
+    padding:8px;
+    padding-left:23px;
+    padding-right:23px;
+}
+
+#appshere{
+    height:50px;
+}
+#aboutmehere{
+    height:50px
+}
+#contactmehere{
+    height:50px;
+}
+
+#mainsection{
+    display:flex;
+}
+main{
+    width:50%;
+}
+aside{
+    width:50%;
+}
+#asidedisplay{
+    display:flex;
+}
+.sectionheader{
+    height:50px;
+    width:100%;
+    text-align:center;
+    font-size: 35px;
+    color:whitesmoke;
+    background-color:var(--navycolor);
+    padding-top:10px;
+}
+
+.sectionheader:hover + div{
+    display:flex;
+    width:100%;
+    height:50px;
+    color:whitesmoke;
+    font-size:20px;
+    justify-content:center;
+    margin-top:2px;
+    margin-bottom:1px;
+    background-color: var(--navycolor);
+}
+#appshere:hover +div::after{
+    content:"Here are all of the apps I have developed from scratch so far.";
+    margin-top:10px;
+}
+#aboutmehere:hover +div::after{
+    content:"Here is some information about me.";
+    margin-top:10px;
+}
+#contactmehere:hover +div::after{
+    content:"Here is where you can contact me.";
+    margin-top:10px;
+}
+
+
+#imagesection{
+    display:flex;
+    flex-wrap:wrap;
+    height:600px;
+    border: 5px solid var(--navycolor);
+}
+
+.appimage{
+    justify-content: center;
+    width:50%;
+    height:50%;
+}
+.appimage img{
+    justify-self:center;
+    margin: 10px;
+    margin-top:40px;
+    height: 70%;
+    width: 90%;
+    border:3px;
+    border-color:var(--navycolor);
+    border-style: solid;
+}
+
+.appimagetext{
+    justify-self:center;
+    position:relative;
+    margin:10px;
+    color:whitesmoke;
+    font-size:2vw;
+    left:17%;
+    bottom:80%;
+}
+.upperimage{
+    color:whitesmoke
+}
+.upperimage img{
+    margin-top:90px;
+}
+
+.box{
+    position:relative;
+    justify-self:center;
+    width: 90%;
+    height: 30%;
+    background-color:rgba(24, 23, 23, 0.527);
+    margin:10px;
+    bottom:55%;
+}
+
+.textsection{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:column;
+    width:100%;
+    border:5px;
+    border: left 5px;
+    border-color:var(--navycolor);
+    border-style:solid;
+    color:black;
+}
+#imageofme{
+    margin:15px;
+    margin-top:30px;
+    margin-left:30px;
+    width:200px;
+    height:280px;
+    border:2px solid black;
+}
+
+#textsectionAB{
+    height:400px;
+}
+
+#textsectionC{
+    height:150px;
+}
+
+section p {
+    text-indent: 60px;
+    font-size:20px;
+    margin:30px;
+}
+#textsectionAB p{
+    width:300px;
+    margin-top:60px;
+    margin-left:20px;
+}
+.contactsection{
+    width:100%;
+    display:flex;
+    height:200px;
+    border:5px solid var(--navycolor);
+    border-left:3px;
+}
+#contacttabs{
+    display:flex;
+}
+#emailplace{
+    display:flex;
+    flex-direction:column;
+    width:28%;
+    min-width:125px;
+    max-width:130px;
+}
+#gitplace{
+    display:flex;
+    flex-direction:column;
+    width:28%;
+    min-width:120px;
+    max-width:200px;
+}
+
+#emailtab{
+    background-color:whitesmoke;
+    border:solid 2px var(--navycolor);
+    height:40px;
+    width:120px;
+    text-align: center;
+    padding-top:10px;
+    margin:2px;
+    margin-left:4px;
+    border-radius:3px;
+}
+#gittab{
+    background-color:whitesmoke;
+    border:solid 2px var(--navycolor);
+    height:40px;
+    width:120px;
+    text-align:center;
+    padding-top:10px;
+    margin:2px;
+    right:20%;
+    border-radius:3px;
+}
+
+#emaillink{
+    visibility: hidden;
+    position:relative;
+    top:50%;
+    left:51%;
+    font-size:20px;
+    background-color: var(--navycolor);
+    color:whitesmoke;
+    width:260px;
+    height:30px;
+    text-align:center;
+    padding-top:5px;
+}
+#gitlink{
+    visibility:hidden;
+    position:relative;
+    top:50%;
+    right:50%;
+    font-size:20px;
+    background-color: var(--navycolor);
+    color:whitesmoke;
+    width:200px;
+    height:30px;
+    text-align:center;
+    padding-top:5px;
+}
+#emaillink:hover{
+    background-color:rgb(14, 49, 70);
+}
+#gitlink:hover{
+    background-color:rgb(14, 49, 70);
+}
+
+#emailtab:focus{
+    background-color:var(--navycolor);
+    color:whitesmoke;
+}
+
+#emailplace:focus-within >#emaillink{
+    visibility: visible;
+}
+
+#gittab:focus{
+    background-color:var(--navycolor);
+    color:whitesmoke;
+}
+#gitplace:focus-within >#gitlink{
+    visibility:visible;
+}
+
+
+@media screen and (max-width: 662px){
+    nav{
+        flex:1 0 0;
+        display:flex;
+        justify-content: space-between;
+        margin-top:10px;
+        margin-bottom:30px;
+        margin-left:40px;
+        margin-right:40px;
+    }
+    #titlegrow{
+        flex:1 0 0;
+        display:flex;
+        border-bottom-style:hidden;
+        
+    } 
+}
+
