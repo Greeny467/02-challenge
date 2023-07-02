@@ -2,6 +2,7 @@
     --navycolor:rgb(47, 85, 116);
 }
 
+/* fix the strange extra width space issue*/
 html,body
 {
     width: 100%;
@@ -16,12 +17,13 @@ html,body
 }
 
 
-
+/*Title and Nav are on same line at default*/
 header {
     display:flex;
     flex-wrap:wrap;
 }
 
+/*how much the nav elements will grow*/
 .grow{
     flex: 1 0 0
 }
@@ -29,9 +31,12 @@ header {
 .border{
     border:8px solid var(--navycolor);
 }
+
+/*fix double border between title and nav*/
 #titleborderfix{
     border-left-style:hidden;
 }
+/*title takes up 4/10 of the screen*/
 #titlegrow{
     flex:0.4 0 0;
     display:flex;
@@ -68,6 +73,7 @@ nav a{
     color:black;
 }
 
+/*change styling when hovering over nav links*/
 nav a:hover{
     color:rgb(48, 148, 151);
     border: 2px solid var(--navycolor);
@@ -76,6 +82,7 @@ nav a:hover{
     padding-right:23px;
 }
 
+/*use id to help locate sections for other style rules*/
 #appshere{
     height:50px;
 }
@@ -86,18 +93,23 @@ nav a:hover{
     height:50px;
 }
 
+/*the main section displays the main and asside elements next to eachother at default*/
 #mainsection{
     display:flex;
 }
+
+/*define how much of the page width the main and aside sections take up*/
 main{
     width:50%;
 }
 aside{
     width:50%;
 }
+
 #asidedisplay{
     display:flex;
 }
+
 .sectionheader{
     height:50px;
     width:100%;
@@ -108,6 +120,7 @@ aside{
     padding-top:10px;
 }
 
+/*When hovering over a section header, the div after is given style, making space for a description*/
 .sectionheader:hover + div{
     display:flex;
     width:100%;
@@ -119,6 +132,8 @@ aside{
     margin-bottom:1px;
     background-color: var(--navycolor);
 }
+
+/*creates an after element for the description of the different sections*/
 #appshere:hover +div::after{
     content:"Here are all of the apps I have developed from scratch so far.";
     margin-top:10px;
@@ -133,6 +148,7 @@ aside{
 }
 
 
+/*define styling of the image section and its elements*/
 #imagesection{
     display:flex;
     flex-wrap:wrap;
@@ -165,11 +181,13 @@ aside{
     left:17%;
     bottom:80%;
 }
+
+/*I used the upperimage class to differentiate between images, so that I could give the top row images a different margin rule*/
 .upperimage{
     color:whitesmoke
 }
 .upperimage img{
-    margin-top:90px;
+    margin-top:20%;
 }
 
 .box{
@@ -182,6 +200,7 @@ aside{
     bottom:55%;
 }
 
+/*defines how a default text section displays*/
 .textsection{
     display:flex;
     flex-wrap:wrap;
@@ -193,15 +212,17 @@ aside{
     border-style:solid;
     color:black;
 }
+
+/*special id for the about me image*/
 #imageofme{
     margin:15px;
     margin-top:30px;
     margin-left:30px;
-    width:200px;
-    height:280px;
+    width:30%;
     border:2px solid black;
 }
 
+/*both describes the desired height of the different text sections, and allows to differentiate between them*/
 #textsectionAB{
     height:400px;
 }
@@ -210,16 +231,21 @@ aside{
     height:150px;
 }
 
+/*defines how text in a text section should be styled*/
 section p {
     text-indent: 60px;
     font-size:20px;
     margin:30px;
 }
+
+/*special rules for the about me section text*/
 #textsectionAB p{
-    width:300px;
-    margin-top:60px;
+    width:50%;
+    font-size:2vw;
+    margin-top:45px;
     margin-left:20px;
 }
+
 .contactsection{
     width:100%;
     display:flex;
@@ -227,9 +253,15 @@ section p {
     border:5px solid var(--navycolor);
     border-left:3px;
 }
+
+/*container for the contact tabs*/
 #contacttabs{
     display:flex;
 }
+
+/*the place id's are used to organize the tab and its text to reveal,
+this allows for me to give the tab utility without there being a space
+between the tabs for the text they would hold*/
 #emailplace{
     display:flex;
     flex-direction:column;
@@ -245,6 +277,7 @@ section p {
     max-width:200px;
 }
 
+/*define the two contact tabs*/
 #emailtab{
     background-color:whitesmoke;
     border:solid 2px var(--navycolor);
@@ -268,6 +301,7 @@ section p {
     border-radius:3px;
 }
 
+/*style the links of the tabs*/
 #emaillink{
     visibility: hidden;
     position:relative;
@@ -294,6 +328,8 @@ section p {
     text-align:center;
     padding-top:5px;
 }
+
+/*change style of links when hovering*/
 #emaillink:hover{
     background-color:rgb(14, 49, 70);
 }
@@ -301,11 +337,13 @@ section p {
     background-color:rgb(14, 49, 70);
 }
 
+/*Change email tab style when it is focused*/
 #emailtab:focus{
     background-color:var(--navycolor);
     color:whitesmoke;
 }
 
+/*when the email tab button is focused, then the link becomes visible*/
 #emailplace:focus-within >#emaillink{
     visibility: visible;
 }
@@ -319,7 +357,8 @@ section p {
 }
 
 
-@media screen and (max-width: 662px){
+/*responsive styling for the header*/
+@media screen and (max-width: 815px){
     nav{
         flex:1 0 0;
         display:flex;
@@ -337,3 +376,64 @@ section p {
     } 
 }
 
+/*change page format below 880px*/
+@media screen and (max-width:880px){
+    #mainsection{
+        flex-direction: column;
+        
+    }
+    main{
+        width:100%;
+    }
+    aside{
+        width:100%;
+    }
+    .appimagetext{
+        font-size:4vw;
+        left:20%;
+        bottom:77%;
+    }
+    
+    #textsectionAB p{
+        width:50%;
+        font-size:3vw;
+        margin-top:45px;
+        margin-left:20px;
+    }
+    nav a{
+        font-size:3vw;
+        padding:2vw;
+        padding-left:2vw;
+        padding-right:3vw;
+        margin-right:3vw;
+    }
+}
+
+@media screen and (max-width:415px){
+    #textsectionAB{
+        display:block;
+        height:600px;
+    }
+    #imageofme{
+        width:50%;
+        margin-left:20%;
+    }
+    #textsectionAB p{
+        font-size:5vw;
+        width:80%;
+        margin-top:0px;
+    }
+    #emaillink{
+        font-size:4vw;
+    }
+    #gitlink{
+        font-size:4vw;
+    }
+    nav a{
+        font-size:5vw;
+        padding:2vw;
+        padding-left:3vw;
+        padding-right:4vw;
+        margin-right:4vw;
+    }
+}
