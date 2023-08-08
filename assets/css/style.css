@@ -87,7 +87,7 @@ nav a:hover{
     height:50px;
 }
 #aboutmehere{
-    height:50px
+    height:50px;
 }
 #contactmehere{
     height:50px;
@@ -241,7 +241,7 @@ section p {
 /*special rules for the about me section text*/
 #textsectionAB p{
     width:50%;
-    font-size:2vw;
+    font-size:1vw;
     margin-top:45px;
     margin-left:20px;
 }
